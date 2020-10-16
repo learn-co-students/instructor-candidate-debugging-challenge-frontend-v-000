@@ -16,6 +16,7 @@ function loadComments(gravatar) {
 }
 
 function newComment(e) {
+  e.preventDefault()
   comment = e.target.value
   gravatar = document.getElementById("identicon-form")[0].value
 
@@ -32,6 +33,7 @@ function newComment(e) {
   })
 
   addComment(comment)
+  e.target.reset()
 }
 
 document.addEventListener("DOMContentLoaded", () => {
